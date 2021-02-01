@@ -1,0 +1,52 @@
+*{
+
+}
+body
+{
+    background: #aebdec ;
+
+    font-family: "Gardens CM";
+
+    display: flex; /*Простое управление элементами*/
+
+    align-items: center; /*Работа с перпендикулярной осью*/
+
+    justify-content: flex-end; /*Работа с главноей осью*/
+
+    height:25vh;
+}
+img
+{
+    border-radius: 50px;
+
+    text-align: right;
+}
+
+form
+{
+    background: #ffffff;
+
+    flex-direction: column;
+
+    display: flex;
+
+    width: 100px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+}
+
+a
+{
+    text-decoration: none;
+
+    text-align: right;
+}
+
+p
+{
+
+   /*margin: -10px 10px;*/
+
+}

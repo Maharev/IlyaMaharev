@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #8cfdc9;
+
+    font-family: "Gardens CM";
+
+    display: flex; /*Простое управление элементами*/
+
+    align-items: center; /*Работа с перпендикулярной осью*/
+
+    justify-content: center; /*Работа с главноей осью*/
+
+    height: 100vh;
+}
+/*_____________Форма всего_________________*/
+form
+{
+    background: white;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 400px;
+}
+/*_____________Поля ввода______________*/
+input
+{
+    background: #aebdec;
+
+    margin: 5px 10px ; /* отступы сверху*/
+
+    padding:10px ; /*Размер полей ввода*/
+
+    outline: none; /*Обводка полей8*/
+
+    border: unset;
+
+    border-radius: 10px;
+}
+/*_____________Кнопки_________________*/
+button
+{
+    font-family: "Gardens CM";
+
+    margin: 10px 75px; /* отступы сверху и снизу. отступы слева и справа*/
+
+    padding:15px ; /*Размер кнопки*/
+
+    border: unset; /*Обводка*/
+
+    background: #aebdec;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+button:hover
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /*Тени при наведении*/
+}
+
+label
+{
+    margin: 3px 10px;
+
+    font-size: 20px; /*Размер шрифта*/
+}
+
+p.voyti
+{
+    text-align: center;
+
+    border-radius: 18px 18px 0px 0px; /* Первые px верхние, потом нижнии*/
+
+    background: #aebdec;
+
+    font-size: 40px;
+
+    margin-left: 0;
+
+    padding: 10px;
+}
+
+p.registrat
+{
+    background: #aebdec;
+
+    border-radius: 10px 10px 0px 0px;
+
+    border-style: none;
+
+    font-size: 40px;
+
+    margin: 0px;
+
+    text-align: center;
+}
+
+
+p.errorpass
+{
+    margin: 0px 100px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #9b0100;
+
+    font-weight: unset; /*Тип текста*/
+}
+
+p.noproblem
+{
+
+    text-decoration: none;
+
+    margin: 5px 50px;
+
+    text-align: center;
+
+    color: #24811e;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+a
+{
+    text-decoration: none; /*Убираем нижнее подчеркивание*/
+
+    margin-left: 260px;
+
+    color: black;
+
+    font-weight: unset;
+}
+
+p
+{
+    margin-left: 5px ;
+
+    font-size: 17px;
+
+    padding: 5px 10px;
+
+    margin-bottom: 10px ;
+
+}
+
+.inreg
+{
+    font-weight: unset;
+
+    color: black;
+
+    margin-left: 90px;
+
+    font-size: 17px;
+
+}
+
+.inreg:hover
+{
+    box-shadow: 10px 15px 20px 0 rgba(0,0,0,0.20) ;
+}
+
+.inrega
+{
+    font-weight: unset;
+
+    color: black;
+
+    margin-left: 85px;
+
+    font-size: 17px;
+
+}

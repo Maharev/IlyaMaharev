@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #81ffc6;
+
+    font-family: "Gardens CM";
+
+    display: flex; /*Простое управление элементами*/
+
+    align-items: center; /*Работа с перпендикулярной осью*/
+
+    justify-content: center; /*Работа с главноей осью*/
+
+    height: 100vh;
+
+    width: auto;
+}
+/*_____________Форма всего_________________*/
+form
+{
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 390px;
+
+    height: auto;
+
+    padding: 20px 0px;
+
+
+}
+p
+{
+    line-height: 1.4 ; /* Поле для текста*/
+
+    font-size: 25px;
+
+    text-align:center ;
+
+    font-weight: bold;
+
+    padding-bottom: 0px ;
+}
+.comment /* Коммент под главный параграф*/
+{
+    font-size: 15px;
+
+    text-align:center ;
+
+    padding-bottom: 10px ;
+
+    font-weight: unset;
+}
+
+.employee /* "a" Работника*/
+ {
+    width: 200px;
+
+    height: auto;
+
+    transition: width 1s, height 1s, transform 1s; /*Скорость анимации*/
+
+    text-align: center;
+
+    padding:30px 10px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 10px 50px;
+
+    background: #aebdec;
+
+    color: black;
+
+
+ }
+.employee:hover /*Эффект увеличения в ширину и высоту*/
+{
+    width: 300px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+
+}
+
+.customer /* "a" Заказчика*/
+{
+    width: 200px;
+
+    height: auto;
+
+    transition: width 1s, height 1s, transform 1s; /*Скорость анимации*/
+
+    text-align: center;
+
+    padding: 30px 10px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 0px 50px;
+    
+    background: #aebdec;
+
+    color: black;
+
+
+}
+
+.customer:hover /*Эффект увеличения в ширину и высоту*/
+{
+    width: 300px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
