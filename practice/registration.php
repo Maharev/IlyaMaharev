@@ -1,4 +1,6 @@
 <?php
+include('global.php');
+
 session_start();
 if ($_SESSION['user']) {
     header('Location: profile.php');
@@ -39,11 +41,11 @@ if ($_SESSION['user']) {
 
 
     <?php
-    if ($_SESSION['message']){
+    if ($_SESSION['message']) {
+        echo '<p class="errorpass">' . $_SESSION['message'] . '</p>';
+    }
 
-            echo '<p class="errorpass">' . $_SESSION['message'] . '</p>';}
-
-            unset( $_SESSION['message'])    ?>
+            unset($_SESSION['message'])    ?>
 
     <!---------------------Почта----------------->
 
@@ -53,9 +55,9 @@ if ($_SESSION['user']) {
 
     <!-------------------Роль--------------------->
 
-    <input type="radio" class="customer" name="role" value="customer">
+    <input type="radio" class="customer" name="role" value="<?php echo USER_TYPE_CUSTOMER;?>">
     <label class="choice">Я хочу работать</label><br>
-    <input type="radio" class="employee" name="role" value="employee">
+    <input type="radio" class="employee" name="role" value="<?php echo USER_TYPE_EMPLOYEE;?>">
     <label class="choice">Я хочу нанять</label><br>
 
     <!-------------------Изображение--------------------->
