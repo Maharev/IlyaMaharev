@@ -19,7 +19,7 @@ if ($_SESSION['user']) {
 </head>
 <body>
     <!-- Форма авторизациии -->
-<form  action="vendor/signin.php" method="post">
+<form  action="vendor/signin.php"  method="post">
        <p class="voyti">Авторизация</p>
     <!------------------------------------------------>
     <label >Логин</label>
@@ -30,7 +30,7 @@ if ($_SESSION['user']) {
 
 <input type="password" placeholder="Ваш пароль" name="pass">
     <!------------------------------------------------>
-    <a href="">Забыли пароль?</a>
+    <a href="" class="forgot">Забыли пароль?</a>
 
     <button type="submit">Войти</button>
 
@@ -44,6 +44,13 @@ if ($_SESSION['user']) {
         echo '<p class="noproblem">' . $_SESSION['message'] . '</p>';}
 
     unset( $_SESSION['message'])    ?>
+
+    <?php
+    if ($_SESSION['message1']){
+
+        echo '<p class="logandpass">' . $_SESSION['message1'] . '</p>';}
+
+    unset( $_SESSION['message1'])    ?>
 </p>
 </form>
 

@@ -14,18 +14,25 @@ if ($_SESSION['user']) {
 </head>
 <body>
     <!-- Форма авторизациии -->
+
 <form  action="vendor/signup.php" method="post" enctype="multipart/form-data">
+
        <p class="registrat">Регистрация</p>
+
     <!------------------Логин------------------------->
+
     <label >Ваш логин</label>
 
 <input type="text" name="login" placeholder="Придумайте логин">
+
     <!-------------------Пароль---------------------->
 
     <label >Пароль</label>
 
     <input type="password" name="password" placeholder="Придумайте пароль">
+
     <!--------------------Подтвердить пароль---------------------->
+
     <label ></label>
 
     <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
@@ -39,13 +46,24 @@ if ($_SESSION['user']) {
             unset( $_SESSION['message'])    ?>
 
     <!---------------------Почта----------------->
+
     <label >Почта</label>
 
     <input type="email" name="mail" placeholder="Ваш логин">
+
+    <!-------------------Роль--------------------->
+
+    <input type="radio" class="customer" name="role" value="customer">
+    <label class="choice">Я хочу работать</label><br>
+    <input type="radio" class="employee" name="role" value="employee">
+    <label class="choice">Я хочу нанять</label><br>
+
     <!-------------------Изображение--------------------->
+
     <label >Изображение профиля</label>
 
     <input type="file" name="photo" >
+
     <!------------------------------------------------>
 
 

@@ -1,23 +1,32 @@
 <?php
 
     session_start();
-            include 'connecting.php';
+            require_once 'connecting.php';
 
-$login = $_POST ['login']; //Проверка логина
 
-$password = md5($_POST ['pass']); //Проверка пароля
-
-    $check_user = mysqli_query  ($connect, "SELECT * FROM `registrationfull` WHERE `login` ='$login' AND `pass` = '$password'"); //Обращение к базе данных
-
-               // echo mysqli_num_rows($check_user);
-
-$otvet = mysqli_num_rows($check_user);
+  //_______________________________________________________________________________________________________________________________________________________//
+ //                                                                   Блок для первой аутентификации                                                      //
+//-------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
 
 
-                 if ($otvet > 0)
+                $login = $_POST ['login']; //Проверка логина
+
+                $password = md5($_POST ['pass']); //Проверка пароля
+
+                $check_user = mysqli_query  ($connect, "SELECT * FROM `registrationfull` WHERE `login` ='$login' AND `pass` = '$password'"); //Обращение к базе данных
+
+
+
+                $otvet = mysqli_num_rows($check_user);
+
+
+
+
+
+                 if ($otvet > 0) //Проверка на кол-во строк с похожими данными из таблицы registrationfull
             {
                 $user = mysqli_fetch_assoc($check_user) ;
                 $_SESSION['user'] = [
@@ -31,10 +40,12 @@ $otvet = mysqli_num_rows($check_user);
             }
 
             else {
-                $_SESSION['message'] = 'Не верный логин или пароль'; //Вывод сообщение об неправильно введенной информации
+                $_SESSION['message1'] = 'Не верный логин или пароль'; //Вывод сообщение об неправильно введенной информации
 
                 header('Location: ../index.php');
             }
 ?>
+
+
 
 

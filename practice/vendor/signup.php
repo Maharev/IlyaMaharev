@@ -1,7 +1,7 @@
 <?php
 
             session_start();
-            include 'connecting.php'; /* Подключение переменной, которая содержит подключение*/
+            require_once 'connecting.php'; /* Подключение переменной, которая содержит подключение*/
 
 
     //Отдельные переменные
@@ -34,7 +34,7 @@
             (`id`, `login`, `pass`, `email`, `file`) 
             
             VALUES (NULL, '$login', '$password', '$mail', '$path')");
-        $_SESSION['message'] = 'Регистрация прошла успешно';
+        $_SESSION['message1'] = 'Регистрация прошла успешно';
 
         header('Location: ../index.php');
 

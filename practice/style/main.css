@@ -20,7 +20,7 @@ body
 
     height: 100vh;
 }
-/*_____________Форма всего_________________*/
+/*_____________Основная форма_________________*/
 form
 {
     background: white;
@@ -70,14 +70,14 @@ button:hover
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /*Тени при наведении*/
 }
 
-label
+label /*_ Обозначения каждого поля _*/
 {
     margin: 3px 10px;
 
     font-size: 20px; /*Размер шрифта*/
 }
 
-p.voyti
+p.voyti /*_ Параграф (Авторизоваться) в файле index.php _*/
 {
     text-align: center;
 
@@ -92,7 +92,7 @@ p.voyti
     padding: 10px;
 }
 
-p.registrat
+p.registrat /*_ Параграф (Регистрация) в файле registration & registration2 _*/
 {
     background: #aebdec;
 
@@ -108,20 +108,20 @@ p.registrat
 }
 
 
-p.errorpass
+p.errorpass /*_ Сообщение о соответсвии повторного пароля с исходным _*/
 {
     margin: 0px 100px;
 
     border-radius: 10px;
 
-    background: white;
+    background: #ffffff;
 
     color: #9b0100;
 
     font-weight: unset; /*Тип текста*/
 }
 
-p.noproblem
+p.noproblem /*_ Сообщение об успешной регистрации _*/
 {
 
     text-decoration: none;
@@ -148,7 +148,7 @@ a
     font-weight: unset;
 }
 
-p
+p /*_ Для всех параграфов _*/
 {
     margin-left: 5px ;
 
@@ -160,21 +160,25 @@ p
 
 }
 
-.inreg
+.inreg /*_Зарегистрироваться_*/
 {
     font-weight: unset;
 
     color: black;
 
-    margin-left: 90px;
+    margin-left: 80px;
 
     font-size: 17px;
 
+    transition: font-weight 0.1s;
+
 }
 
-.inreg:hover
+.inreg:hover /*_ Эффект для (зарегистрироваться)_*/
 {
-    box-shadow: 10px 15px 20px 0 rgba(0,0,0,0.20) ;
+    box-shadow: 10px 15px 20px 0 rgba(0,0,0,0.2) ;
+
+    font-weight: bold;
 }
 
 .inrega
@@ -187,4 +191,63 @@ p
 
     font-size: 17px;
 
+}
+.forgot /*_ Забыли пароль _*/
+{
+    text-decoration: none; /*Убираем нижнее подчеркивание*/
+
+    margin-left: 260px;
+
+    color: black;
+
+    font-weight: unset;
+}
+
+.forgot:hover /*_ Эффект для (забыли пароль)_*/
+{
+    box-shadow: 10px 15px 20px 0 rgba(0,0,0,0.2) ;
+
+    font-weight: bold;
+}
+
+p.logandpass /*_ Сообщение о неверных данных _*/
+{
+    text-decoration: none;
+
+    margin: 5px 50px;
+
+    text-align: center;
+
+    color: #ff0000;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+/*_____________________________________________________Radio boxes ( для выбора роли )_________________________________*/
+
+.customer
+{
+    width: 15px;
+
+    height: 15px;
+
+    margin-top: 15px;
+
+    margin-left: 10px;
+
+}
+.employee
+{
+    width: 15px;
+
+    height: 15px;
+
+    margin-left: 10px;
+}
+.choice
+{
+    margin-left: 30px;
+
+    margin-top: -25px;
 }
